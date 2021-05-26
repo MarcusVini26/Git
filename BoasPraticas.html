@@ -1,0 +1,94 @@
+<html>
+<head>
+    <script>
+        
+        /*Primeira: O JavaScript é Case-Sensitive, então sepre utilize um padrão para a criação 
+        das vavriáveis.
+        Definindo um padrão para criar suas variáveis você evita de criar duas variáveis para 
+        a mesma coisa e evita de chamar ela de forma errada e acabar dando erros igual aconteceu abaixo*/
+        function Exemplo1Errado() { 
+           
+                var ifsp = 1;
+               
+                
+                console.log("Motre IFSP: " + IFSP);
+            
+           
+        }
+      
+        function Exemplo1Certo() { 
+           
+           var IFSP = 1;
+          
+           
+           console.log("Motre IFSP: " + IFSP);
+       
+      
+   }
+        //Exemplo1Errado();
+        Exemplo1Certo();
+
+       // Fim Primeiro
+
+       /*Segundo: Use === Ao Invés de == pois se dois operandos tem o mesmo tipo e valor, 
+       o === retornar verdadeiro e !== retorna falso. 
+       Se usarmos == e !=, acabará se deparando com problemas, ao trabalhar com tipos diferentes. 
+       Nesses casos, eles forçaraão uma conversão dos valores, sem sucesso.
+       */
+       function Exemplo2Errado()
+       {
+            var t1 = 1;
+            var t2 = "1";
+
+            if(t1 == t2)
+            {
+                console.log("Errado");
+            }
+       }
+
+       function Exemplo2Certo()
+       {
+            var t1 = 1;
+            var t2 = "1";
+
+            if(t1 === t2)
+            {
+                console.log("Errado");
+            }else{
+                console.log("Não apareceu");
+            }
+       }
+
+       Exemplo2Errado();
+       Exemplo2Certo();
+
+       /* Se tiver que criar várias variáveis,
+       Omita a Palavra-Chave "var" e Passe a Usar Vírgulas.
+       Fazendo isso vai deixar seu código mais limpo e facil de entender */
+       function Exemplo3Errado()
+       {
+           var item = 1;
+           var soma = 2;
+           var peso = 3;
+
+           console.log( item + " " + soma + " "+ peso);
+       }
+
+       function Exemplo3Certo()
+       {
+            var item = 1,
+                soma = 2,
+                peso = 3;
+
+           console.log( item + " " + soma + " "+ peso);
+       }
+
+       Exemplo3Errado();
+       Exemplo3Certo();
+    </script>
+ 
+</head>
+<body>
+    <p>Boas Praticas</p>
+</body>
+</html>
